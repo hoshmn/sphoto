@@ -9,7 +9,7 @@ db.sync()
   server.on('request', app);
 })
 .then(function () {
-  var PORT = 1337;
+  var PORT = 8888;
   server.listen(PORT, function () {
     console.log(chalk.blue('Server started on port', chalk.magenta(PORT)));
   });

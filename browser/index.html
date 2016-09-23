@@ -2,17 +2,44 @@
 <html>
 
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1">
     <title>Sphoto</title>
-
     <link rel="stylesheet" type="text/css" href="/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="/css/style.css" />
+
     <script src="/angular/angular.js" defer></script>
     <script src="/angular-ui-router/release/angular-ui-router.js" defer></script>
     <script src="/js/app.js" defer></script>
     <script src="/js/states/states.js" defer></script>
     <script src="/js/controllers/home.js" defer></script>
+    <script src="/three/build/three.min.js"></script>
+    <script src="/three/examples/js/controls/DeviceOrientationControls.js"></script>
     <!-- base tag is required for html5mode of true -->
     <base href="/">
+    <style>
+    body {
+        margin: 0px;
+        background-color: #000000;
+        overflow: hidden;
+    }
+    
+    /*#info {*/
+        /*position: absolute;
+        top: 0px;
+        width: 100%;
+        color: #ffffff;
+        padding: 5px;
+        font-family: Monospace;
+        font-size: 13px;
+        font-weight: bold;
+        text-align: center;
+    }*/
+    
+    a {
+        color: #ff8800;
+    }
+    </style>
 </head>
 
 <body ng-app="sphoto">
@@ -20,3 +47,5 @@
 </body>
 
 </html>
+
+<!-- 3/ex/js/ren/canren/431 -->
