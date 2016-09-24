@@ -1,11 +1,14 @@
 app.controller('HomeCtrl', function ($scope) {
+	$scope.matrix = false;
+
 	$scope.imageUrls = [
 	'/photospheres/bryce.jpg',
 	'/photospheres/desert.jpg',
 	'/photospheres/snow.jpg',
-	'/photospheres/trail.jpg'
+	'/photospheres/waterfront.jpg'
 	];
 
+	$scope.toggleMatrix = () => $scope.matrix = !$scope.matrix;
 
 
 });

@@ -1,6 +1,7 @@
-
 <div class="pic-grid">
-    <img ui-sref="viewer({url:url})" ng-repeat="url in imageUrls" class="half-screen" src="{{url}}" />
+    <img ui-sref="viewer({url:url, matrix: matrix})" ng-repeat="url in imageUrls" class="half-screen" src="{{url}}" />
 </div>
-
-
+<button ng-click="toggleMatrix(matrix)">Turn Matrix
+    <span ng-show="matrix">Off</span>
+    <span ng-hide="matrix">On</span>
+</button>

@@ -7,11 +7,11 @@ app.config(function($stateProvider) {
 
     $stateProvider.state('viewer', {
         url: '/viewer',
-        params: { url: null },
+        params: { url: null, matrix: false },
         templateUrl: '/templates/viewer.html',
         controller: function($scope, $stateParams) {
             $scope.url = $stateParams.url;
-
+            $scope.matrix = $stateParams.matrix;
 
             console.log('running');
 
@@ -33,10 +33,13 @@ app.config(function($stateProvider) {
             });
             var mesh = new THREE.Mesh(geometry, material);
             scene.add(mesh);
-            var geometry = new THREE.BoxGeometry(100, 100, 100, 4, 4, 4);
-            var material = new THREE.MeshBasicMaterial({ color: 0xff00ff, side: THREE.BackSide, wireframe: true });
-            var mesh = new THREE.Mesh(geometry, material);
-            scene.add(mesh);
+
+            if ($scope.matrix){
+                var geometry = new THREE.BoxGeometry(100, 100, 100, 4, 4, 4);
+                var material = new THREE.MeshBasicMaterial({ color: 0xff00ff, side: THREE.BackSide, wireframe: true });
+                var mesh = new THREE.Mesh(geometry, material);
+                scene.add(mesh);
+            }
             renderer = new THREE.WebGLRenderer();
             renderer.setPixelRatio(window.devicePixelRatio);
             renderer.setSize(window.innerWidth, window.innerHeight);
