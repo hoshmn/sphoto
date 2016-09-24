@@ -1,5 +1,5 @@
 app.controller('HomeCtrl', function ($scope) {
-	$scope.matrix = false;
+	$scope.matrix;
 
 	$scope.imageUrls = [
 	'/photospheres/bryce.jpg',
