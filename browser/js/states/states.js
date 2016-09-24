@@ -29,7 +29,7 @@ app.config(function($stateProvider) {
             var geometry = new THREE.SphereGeometry(500, 16, 8);
             geometry.scale(-1, 1, 1);
             var material = new THREE.MeshBasicMaterial({
-                map: new THREE.TextureLoader().load("/photospheres/bryce.jpg")
+                map: new THREE.TextureLoader().load($scope.url)
             });
             var mesh = new THREE.Mesh(geometry, material);
             scene.add(mesh);
